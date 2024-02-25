@@ -1,7 +1,7 @@
 # QDTool
 
-### Simple tool for converting different types of SHARP MZ QuickDisk and tape files between each other - QDF, MZQ, MZT, MZF, ...
-QDTool can also be used to edit files. You can reorder, add or delete files. Drag&Drop is supported. For example, in addition to QuickDisk files, you can easily create a multi-file MZT file for UniCMT with files in the correct order for sequential load. QDTool also includes a simple file browser.
+### Simple tool for converting and editing different types of SHARP MZ QuickDisk and tape files between each other - QDF, MZQ, MZT, MZF, ...
+You can also reorder, add or delete files. Drag&Drop is supported. For example, in addition to QuickDisk files, you can easily create a multi-file MZT file for UniCMT with files in the correct order for sequential load. QDTool also includes a simple file browser.
 
 <img width="786" height="443" src="https://github.com/mlukasek/QDTool/blob/c911edfe775f9a6410da1737b589abbe53808668/images/QDTool_scr_2024-02-25.png">
 
@@ -23,6 +23,11 @@ QDTool is Windows WPF application and requires .NET Framework 6.0 to run. It is 
 
 ### Releases
 **2024-02-25  0.1.0 alpha** - first alpha release
+
+### Known bugs
+**0.1.0 alpha**
+- color boxes in viewer have bad position on some display resolutions
+- 
 
 ##### QDTool<br/>Copyright (C) 2024 Martin Lukasek <martin@8bity.cz>, www.8bity.cz  
 ###### This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
