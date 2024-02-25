@@ -1,0 +1,21 @@
+﻿<Window x:Class="QDTool.AboutDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QDTool"
+        mc:Ignorable="d"
+        Title="About" Height="175" Width="300">
+    <StackPanel Margin="10">
+        <TextBlock FontWeight="Bold" FontSize="14"><Run Language="cs-cz" Text="QDTool"/></TextBlock>
+        <TextBlock><Run Text="V"/><Run Text="ersion"/><Run Text=" "/><Run Text="0"/><Run Text=".1"/><Run Text=".0"/><Run Text=" alpha (25 Feb 2024)"/></TextBlock>
+        <TextBlock><Run Text="© 2024 "/><Run Text="Martin Lukasek"/></TextBlock>
+        <TextBlock><Run Language="cs-cz" Text="Simple app to convert SHARP MZ files."/></TextBlock>
+        <TextBlock>
+            <Hyperlink NavigateUri="https://www.8bity.cz" RequestNavigate="Hyperlink_RequestNavigate">
+                www.8bity.cz
+            </Hyperlink>
+        </TextBlock>
+        <Button Content="OK" HorizontalAlignment="Right" Margin="0,10,0,0" Click="OkButton_Click" RenderTransformOrigin="-3.09,-1.299"/>
+    </StackPanel>
+</Window>

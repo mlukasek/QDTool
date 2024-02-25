@@ -1,0 +1,49 @@
+﻿<Window x:Class="QDTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QDTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        AllowDrop="True" DragEnter="Window_DragEnter" Drop="Window_Drop">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="739*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="MzfDataGrid" 
+                  IsReadOnly="True"
+                  AllowDrop="True"
+                  SelectionMode="Single"
+                  SelectionChanged="MzfDataGrid_SelectionChanged" 
+                  CanUserAddRows="False" 
+                  VerticalGridLinesBrush="LightGray" 
+                  HeadersVisibility="Column" 
+                  AutoGenerateColumns="False" 
+                  CanUserSortColumns="False" 
+                  Margin="10,10,91,31">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding MzfFtypeName}" Width="Auto"/>
+                <DataGridTextColumn Header="File name" Binding="{Binding MzfFname}" Width="Auto" MinWidth="140"/>
+                <DataGridTextColumn Header="Size" Binding="{Binding MzfSize}" Width="Auto"/>
+                <DataGridTextColumn Header="Size(Hex)" Binding="{Binding MzfSizeHex}" Width="Auto"/>
+                <DataGridTextColumn Header="Start" Binding="{Binding MzfStartHex}" Width="Auto"/>
+                <DataGridTextColumn Header="Exec" Binding="{Binding MzfExecHex}" Width="Auto"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding MzfHeaderDescription}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="openButton" Content="Open..." Margin="0,10,27,0" VerticalAlignment="Top" Click="button_Click_Open" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="saveButton" Content="Save As..." Margin="0,255,27,0" VerticalAlignment="Top" Click="button_Click_Save" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="viewButton" Content="View" Margin="0,185,27,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="66" Click="button_Click_View" Grid.ColumnSpan="2"/>
+        <Button x:Name="moveUpButton" FontFamily="Segoe UI" Content="&#x2191;" Margin="0,10,65,0" Click="button_Click_Up" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="21"/>
+        <Button x:Name="moveDownButton" FontFamily="Segoe UI" Content="&#x2193;" Margin="0,0,65,31" Click="button_Click_Down" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="21"/>
+        <Button x:Name="exportButton" Content="Export..." Margin="0,115,27,0" VerticalAlignment="Top" Click="button_Click_Export" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="addButton" Content="Add..." HorizontalAlignment="Right" Margin="0,45,27,0" VerticalAlignment="Top" Width="66" Click="button_Click_Add" Grid.ColumnSpan="2"/>
+        <Label x:Name="infoText" Content="No data loaded" HorizontalAlignment="Left" Margin="10,0,0,4" Width="638" Height="26" VerticalAlignment="Bottom"/>
+        <Button x:Name="deleteButton" Content="Delete" Margin="0,220,27,0" VerticalAlignment="Top" Click="button_Click_Delete" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="exportAllButton" Content="Export All" Margin="0,150,27,0" VerticalAlignment="Top" Click="button_Click_ExportAll" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="clearAllButton" Content="Clear All" Margin="0,80,27,0" VerticalAlignment="Top" Click="button_Click_ClearAll" HorizontalAlignment="Right" Width="66" Grid.ColumnSpan="2"/>
+        <Button x:Name="aboutButton" Content="About..." Margin="0,0,27,31" Grid.ColumnSpan="2" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="66" Click="button_Click_About"/>
+    </Grid>
+</Window>
