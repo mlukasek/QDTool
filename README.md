@@ -21,6 +21,8 @@ QDTool can also be used to edit files. You can reorder, add or delete files. Dra
 ### Requirements
 QDTool is Windows WPF application and requires .NET Framework 6.0 to run. It is written in C# in Microsoft Visual Studio 2022.
 
+### Releases
+**2024-02-25  0.1.0 alpha** - first alpha release
 
 ##### QDTool<br/>Copyright (C) 2024 Martin Lukasek <martin@8bity.cz>, www.8bity.cz  
 ###### This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
